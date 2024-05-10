@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.custom-btn {
+    @apply cursor-pointer w-40 h-14 bg-colorPink rounded-3xl text-white font-bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.custom-btn:hover {
+    @apply hover:border-2 hover:bg-white hover:border-colorPink hover:text-colorPink;
+}
+
+.btn-slide{
+    @apply bg-slate-300 h-1 w-5 rounded-xxxl
+}
+.active-button-slide{
+    @apply bg-colorPurple rounded-xxxl my-0 mx-2 w-6 h-2
+}
+.custom-input{
+    @apply   rounded-xl outline-colorGray border-blue-50 border-2 placeholder:pl-4
 }
